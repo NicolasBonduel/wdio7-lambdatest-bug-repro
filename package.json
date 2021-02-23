@@ -1,0 +1,23 @@
+{
+  "name": "wdio7lambdatest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@wdio/cli": "^7.0.7",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "@wdio/local-runner": "^7.0.4",
+    "@wdio/mocha-framework": "^7.0.7",
+    "@wdio/spec-reporter": "^7.0.7",
+    "@wdio/sync": "^7.0.7",
+    "chromedriver": "^88.0.0",
+    "wdio-chromedriver-service": "^7.0.0"
+  }
+}
