@@ -4,9 +4,7 @@ Amongst others, one major change is a stricter compliance to protocols. You can 
 
 Here is the gist of it:
 
-```
-The WebDriver protocol has been upgraded to a W3C recommended standard since 2018. A lot of cloud vendors and tools have been able to update their implementation making all artifacts of the JSONWireProtocol obsolete. The WebdriverIO projects wants to support this transition by adding additional checks to its capability configuration to ensure users don't accidentally send a mixture of both protocols resulting in an unexpected behavior. With the new version your session request will automatically fail if you send incompatible capabilities along.
-```
+> The WebDriver protocol has been upgraded to a W3C recommended standard since 2018. A lot of cloud vendors and tools have been able to update their implementation making all artifacts of the JSONWireProtocol obsolete. The WebdriverIO projects wants to support this transition by adding additional checks to its capability configuration to ensure users don't accidentally send a mixture of both protocols resulting in an unexpected behavior. With the new version your session request will automatically fail if you send incompatible capabilities along.
 
 ## Current Behavior
 Currently, with previously supported capabilities, WDIO fails on start:
@@ -34,8 +32,8 @@ capabilities: [{
 This is because the `goog:chromeOptions` feature is following the W3C capability standard while the `console`, `video` and `network` features are not.
 
 ## Possible Solution
-As the (W3C documentation)[https://w3c.github.io/webdriver/#capabilities] underlines, it is possible to define "extension capabilities" which must contain a colon character.
-This is what Google and Mozilla use with the custom `goog:chromeOptions` and `moz:experimental-webdriver` capabilities. This is also what SauceLabs use with the `sauce:options` capability.
+As the [W3C documentation](https://w3c.github.io/webdriver/#capabilities) underlines, it is possible to define "extension capabilities" which must contain a colon character.
+This is what Google and Mozilla use with the custom `goog:chromeOptions` and `moz:experimental-webdriver` capabilities. This is also what SauceLabs uses with the `sauce:options` capability.
 
 ## Steps to Reproduce
 
