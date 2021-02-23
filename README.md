@@ -25,9 +25,8 @@ capabilities: [{
 [...]
 ```
 
-```
-@wdio/runner: Error: Invalid or unsupported WebDriver capabilities found ("console", "video", "network"). Ensure to only use valid W3C WebDriver capabilities (see https://w3c.github.io/webdriver/#capabilities).
-```
+> @wdio/runner: Error: Invalid or unsupported WebDriver capabilities found ("console", "video", "network"). Ensure to only use valid W3C WebDriver capabilities (see https://w3c.github.io/webdriver/#capabilities).
+
 
 This is because the `goog:chromeOptions` feature is following the W3C capability standard while the `console`, `video` and `network` features are not.
 
